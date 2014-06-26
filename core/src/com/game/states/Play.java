@@ -20,7 +20,6 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.game.Game;
-import com.game.entities.Bullet;
 import com.game.entities.Player;
 import com.game.handlers.GameStateManager;
 import com.game.handlers.MyContactListener;
@@ -39,7 +38,6 @@ public class Play extends GameState{
 	private OrthogonalTiledMapRenderer tmr;
 	
 	private Player player;
-	private Bullet bullet;
 	
 	public Play(GameStateManager gsm) {
 		
@@ -56,9 +54,6 @@ public class Play extends GameState{
 		
 		// create tiles
 		createTiles();
-		
-		// create bullet
-		bullet = new Bullet(player);
 
 		// set up b2d cam
 		b2dCam = new OrthographicCamera();
@@ -109,9 +104,6 @@ public class Play extends GameState{
 	    // draw player
 	    batch.setProjectionMatrix(cam.combined);
 	    player.render(batch);
-	    
-	    // draw bullet
-	    bullet.render(batch);
 	    
 	    // draw tiled map
 	    tmr.setView(cam);
