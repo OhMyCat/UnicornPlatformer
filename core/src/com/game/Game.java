@@ -6,7 +6,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.game.handlers.Content;
+import com.game.handlers.ResourceManager;
 import com.game.handlers.GameStateManager;
 import com.game.handlers.MyInput;
 import com.game.handlers.MyInputProcessor;
@@ -26,7 +26,7 @@ public class Game extends ApplicationAdapter {
 	private BitmapFont font;
 	
 	private GameStateManager gsm;
-	public static Content res;
+	public static ResourceManager res;
 	
 	public SpriteBatch getSpriteBatch(){return batch;};
 	public OrthographicCamera getCamera(){return cam;};
@@ -39,11 +39,14 @@ public class Game extends ApplicationAdapter {
 		W_WIDTH = Gdx.graphics.getWidth();
 		
 		font = new BitmapFont();
-		
+
 		Gdx.input.setInputProcessor(new MyInputProcessor());
 		
-		res = new Content();
+		res = new ResourceManager();
 		res.loadTexture("images/bunny.png", "bunny");
+		res.loadTexture("images/coin.png", "coin");
+		res.loadTexture("images/hud.png", "hud");
+		res.loadTexture("images/smalluni.png", "uni");
 		
 		batch = new SpriteBatch();
 		cam = new OrthographicCamera();

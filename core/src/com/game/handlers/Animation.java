@@ -9,7 +9,6 @@ public class Animation {
 	private float delay;
 	private int currentFrame;
 	private int timesPlayed;
-	private static int animationLength;
 	
 	public Animation(){}
 	
@@ -18,30 +17,29 @@ public class Animation {
 	}
 	
 	public Animation(TextureRegion[] frames, float delay, int aLength){
-		setFrames(frames, delay, aLength);
+		setFrames(frames, delay);
 	}
 	
-	public void setFrames(TextureRegion[] frames, float delay, int aLength){
+	public void setFrames(TextureRegion[] frames, float delay){
 		this.frames = frames;
 		this.delay = delay;
 		time = 0;
 		currentFrame = 0;
 		timesPlayed = 0;
-		animationLength = aLength;
 	}
 	
 	public void update(float dt){
 		if(delay <= 0) return;
 		time += dt;
 		while(time >= delay){
-			step(animationLength);
+			step();
 		}
 	}
 	
-	private void step(int length){
+	private void step(){
 		time -= delay;
 		currentFrame++;
-		if(currentFrame == length){
+		if(currentFrame == frames.length){
 			currentFrame = 0;
 			timesPlayed++;
 		}

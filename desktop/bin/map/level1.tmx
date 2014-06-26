@@ -1,12 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="40" height="8" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="Ardentryst-grass" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" width="100" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="grass" tilewidth="32" tileheight="32">
   <image source="Ardentryst-TilesAndObjects/Ardentryst-grass.png" width="40" height="44"/>
  </tileset>
- <layer name="Platform" width="40" height="8">
+ <layer name="Platform" width="100" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFgwEwomFa6yPGvOEEqB1OtDaXngDdD5T6Bd0MaptPyE5S7AEAQ+gAKg==
+   eJztl90OgCAIhe39X7qL1tYamh4xDuC3dZcKhx+xlM0mJ4fBee8vMzUdsuvCwso4ZKgDqd41fLXWa/exC61YRtZypgbQtdE09M5XPCLXwKo7AD0b3ScCjH4gNkWok6g9AfELXaOlibTP7D1r2fckW7zQkwuRYJnpRvN1xB5kfmWqnxqM9s3MOOgbZeQMlL/01YonSy60/LC8jyzfBAygM8f9H1PP6YWxX7Zgt6+GpLEXzZ+05gBvuRSVE6ITALk=
   </data>
  </layer>
- <objectgroup name="Coins"/>
+ <objectgroup name="Coins">
+  <object x="204" y="588">
+   <ellipse/>
+  </object>
+  <object x="300" y="524">
+   <ellipse/>
+  </object>
+  <object x="332" y="524">
+   <ellipse/>
+  </object>
+  <object x="360" y="524">
+   <ellipse/>
+  </object>
+  <object x="392" y="524">
+   <ellipse/>
+  </object>
+  <object x="460" y="460">
+   <ellipse/>
+  </object>
+  <object x="396" y="396">
+   <ellipse/>
+  </object>
+  <object x="428" y="396">
+   <ellipse/>
+  </object>
+  <object x="460" y="108">
+   <ellipse/>
+  </object>
+  <object x="492" y="108">
+   <ellipse/>
+  </object>
+  <object x="524" y="108">
+   <ellipse/>
+  </object>
+  <object x="556" y="108">
+   <ellipse/>
+  </object>
+  <object x="76" y="236">
+   <ellipse/>
+  </object>
+  <object x="108" y="236">
+   <ellipse/>
+  </object>
+  <object x="140" y="236">
+   <ellipse/>
+  </object>
+  <object x="172" y="236">
+   <ellipse/>
+  </object>
+  <object x="940" y="492">
+   <ellipse/>
+  </object>
+  <object x="1004" y="492">
+   <ellipse/>
+  </object>
+  <object x="1068" y="492">
+   <ellipse/>
+  </object>
+  <object x="936" y="140">
+   <ellipse/>
+  </object>
+  <object x="876" y="140">
+   <ellipse/>
+  </object>
+  <object x="1324" y="460">
+   <ellipse/>
+  </object>
+  <object x="1356" y="460">
+   <ellipse/>
+  </object>
+  <object x="1612" y="556">
+   <ellipse/>
+  </object>
+  <object x="1644" y="556">
+   <ellipse/>
+  </object>
+  <object x="1676" y="364">
+   <ellipse/>
+  </object>
+  <object x="1740" y="300">
+   <ellipse/>
+  </object>
+  <object x="1932" y="236">
+   <ellipse/>
+  </object>
+  <object x="1900" y="236">
+   <ellipse/>
+  </object>
+  <object x="1868" y="336">
+   <ellipse/>
+  </object>
+  <object x="2124" y="300">
+   <ellipse/>
+  </object>
+  <object x="2092" y="300">
+   <ellipse/>
+  </object>
+  <object x="2060" y="300">
+   <ellipse/>
+  </object>
+  <object x="2796" y="236">
+   <ellipse/>
+  </object>
+  <object x="2828" y="236">
+   <ellipse/>
+  </object>
+  <object x="2924" y="236">
+   <ellipse/>
+  </object>
+  <object x="2444" y="108">
+   <ellipse/>
+  </object>
+  <object x="2284" y="108">
+   <ellipse/>
+  </object>
+  <object x="2316" y="400">
+   <ellipse/>
+  </object>
+  <object x="2508" y="432">
+   <ellipse/>
+  </object>
+  <object x="3052" y="556">
+   <ellipse/>
+  </object>
+ </objectgroup>
 </map>

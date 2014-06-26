@@ -16,24 +16,13 @@ public class Player extends B2DSprite{
 		
 		super(body);
 		
-		Texture tex = Game.res.getTexture("bunny");
+		Texture tex = Game.res.getTexture("uni");
 		sprites = TextureRegion.split(tex, 32, 32)[0];
-	}
-	
-	public void setStayAnimation(){
-		if(!stayAnim){
-			setAnimation(sprites, 1/12f, 1);
-			stayAnim = true;
-			rRunAnim = false;
-		}
-	}
-	
-	public void setRRunAnimation(){
-		if(!rRunAnim){
-			setAnimation(sprites, 1/12f, 3);
-			rRunAnim = true;
-			stayAnim = false;
-		}
+		
+		setAnimation(sprites, 1 / 12f);
+		
+		width = sprites[0].getRegionWidth();
+		height = sprites[0].getRegionHeight();
 	}
 	
 	public void collectCoins(){numCoins++;}
