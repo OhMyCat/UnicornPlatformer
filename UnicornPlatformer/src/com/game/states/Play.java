@@ -20,6 +20,7 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.game.Game;
+import com.game.entities.Bullet;
 import com.game.entities.Player;
 import com.game.handlers.GameStateManager;
 import com.game.handlers.MyContactListener;
@@ -38,6 +39,7 @@ public class Play extends GameState{
 	private OrthogonalTiledMapRenderer tmr;
 	
 	private Player player;
+	private Bullet bullet;
 	
 	public Play(GameStateManager gsm) {
 		
@@ -54,6 +56,9 @@ public class Play extends GameState{
 		
 		// create tiles
 		createTiles();
+		
+		// create bullet
+		bullet = new Bullet(player);
 
 		// set up b2d cam
 		b2dCam = new OrthographicCamera();
@@ -67,13 +72,29 @@ public class Play extends GameState{
 				player.getBody().applyForceToCenter(0, 200, true);
 		}
 		if(MyInput.isTouchClicked())player.getBody().applyForceToCenter(0, 200, true);
+		
+		// player move
+		if(MyInput.isDown(MyInput.RIGHT)){
+				player.getBody().setTransform(
+				player.getBody().getPosition().x + 3 / PPM,
+				player.getBody().getPosition().y,
+				player.getBody().getAngle()
+		   );
+		}
+		if(MyInput.isDown(MyInput.LEFT)){
+				player.getBody().setTransform(
+				player.getBody().getPosition().x - 3 / PPM,
+				player.getBody().getPosition().y,
+				player.getBody().getAngle()
+		   );	
+		}
 	}
 	
-	public void update(float dt){	
-		
-		world.step(dt, 6, 2);
+	public void update(float dt){
 		
 		handleInput();
+		
+		world.step(dt, 6, 2);
 		
 		player.update(dt);
 		
@@ -88,6 +109,9 @@ public class Play extends GameState{
 	    // draw player
 	    batch.setProjectionMatrix(cam.combined);
 	    player.render(batch);
+	    
+	    // draw bullet
+	    bullet.render(batch);
 	    
 	    // draw tiled map
 	    tmr.setView(cam);
