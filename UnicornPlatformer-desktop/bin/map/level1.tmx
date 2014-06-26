@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="40" height="8" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Ardentryst-grass" tilewidth="32" tileheight="32">
+  <image source="Ardentryst-TilesAndObjects/Ardentryst-grass.png" width="40" height="44"/>
+ </tileset>
+ <layer name="Platform" width="40" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFgwEwomFa6yPGvOEEqB1OtDaXngDdD5T6Bd0MaptPyE5S7AEAQ+gAKg==
+  </data>
+ </layer>
+ <objectgroup name="Coins"/>
+</map>

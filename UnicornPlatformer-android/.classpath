@@ -2,12 +2,12 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/UnicornPlatformer"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/core"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry exported="true" kind="lib" path="/UnicornPlatformer/libs/gdx.jar" sourcepath="/UnicornPlatformer/libs/gdx-sources.jar"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="lib" path="libs/gdx-backend-android-sources.jar"/>
 	<classpathentry kind="lib" path="libs/gdx-backend-android.jar"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="/core/libs/gdx.jar" sourcepath="/core/libs/gdx-sources.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
